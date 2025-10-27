@@ -45,7 +45,7 @@ body {
    HERO SECTION
    ================================ */
 .hero {
-    height: 100vh;
+    height: 160vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -60,6 +60,7 @@ body {
     align-items: center;
     z-index: 10;
 }
+    
 
 /* Profile Image Styles */
 .profile-image-container {
@@ -513,7 +514,7 @@ body {
 
 .project-card {
     position: relative;
-    height: 450px;
+    height: 500px;
     border-radius: 20px;
     overflow: hidden;
     cursor: pointer;
