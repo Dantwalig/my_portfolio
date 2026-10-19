@@ -1045,3 +1045,47 @@ h1 {
         transition-duration: 0.01ms !important;
     }
 }
+
+/* ==========================================================
+   Redesign layer: Rwanda palette (green, sun yellow, sky blue)
+   ========================================================== */
+:root { --g: #0C3626; --y: #FAD201; --b: #0B6E99; }
+
+.hero { background: var(--g); color: #F1F5EF; padding: 96px 0 112px; }
+.hero .hero-grid { grid-template-columns: 1.3fr 0.7fr; gap: 64px; align-items: center; }
+.hero h1 { color: #fff; font-size: clamp(3rem, 7.2vw, 6.25rem); line-height: 0.95; letter-spacing: -0.045em; font-weight: 600; margin: 24px 0 28px; }
+.hero .hero-role { color: #fff; font-size: clamp(1.25rem, 2.2vw, 1.75rem); max-width: 22ch; }
+.hero .hero-lede { color: #B9CCC1; max-width: 52ch; }
+.hero .status { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.18); color: #E3EDE6; }
+.hero .status-dot { background: var(--y); }
+.hero .btn-primary { background: var(--y); color: #10241B; border-color: var(--y); }
+.hero .btn-primary:hover { background: #fff; border-color: #fff; }
+.hero .btn-secondary { background: transparent; color: #fff; border-color: rgba(255,255,255,0.4); }
+.hero .btn-secondary:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
+.hero .portrait { box-shadow: 18px 18px 0 var(--y); border: 0; border-radius: var(--radius-lg); }
+.hero .portrait img { aspect-ratio: 4 / 5; object-fit: cover; width: 100%; }
+
+.projects-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 24px; }
+.projects-grid .project { grid-column: span 3; overflow: hidden; }
+.projects-grid .project:first-child { grid-column: 1 / -1; display: grid; grid-template-columns: 5fr 7fr; }
+.projects-grid .project:first-child .project-body { padding: 40px; justify-content: center; }
+.projects-grid .project:first-child h3 { font-size: 1.75rem; letter-spacing: -0.02em; }
+.projects-grid .project-preview { height: 168px; display: grid; place-items: center; border: 0; border-radius: 0; background: var(--g); color: #fff; }
+.projects-grid .project:first-child .project-preview { height: auto; min-height: 280px; }
+.projects-grid .project-glyph { width: 72px; height: 72px; display: grid; place-items: center; border-radius: 50%; background: rgba(255,255,255,0.14); color: inherit; }
+.projects-grid .project-glyph svg { width: 34px; height: 34px; }
+.projects-grid .project:nth-child(2) .project-preview { background: var(--b); }
+.projects-grid .project:nth-child(3) .project-preview { background: var(--y); color: #10241B; }
+.projects-grid .project:nth-child(3) .project-glyph { background: rgba(16,36,27,0.12); }
+.projects-grid .project:nth-child(4) .project-preview { background: #151A17; }
+.projects-grid .project:nth-child(5) .project-preview { background: #20603D; }
+.projects-grid .project:nth-child(6) .project-preview { background: #12506E; }
+
+@media (max-width: 860px) {
+    .hero { padding: 56px 0 72px; }
+    .hero .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+    .hero .portrait { max-width: 320px; box-shadow: 12px 12px 0 var(--y); }
+    .projects-grid .project, .projects-grid .project:first-child { grid-column: 1 / -1; display: flex; flex-direction: column; }
+    .projects-grid .project:first-child .project-body { padding: 24px; }
+    .projects-grid .project:first-child .project-preview { min-height: 168px; }
+}
