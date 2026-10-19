@@ -3,376 +3,482 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniel Gakumba Ntwali - AI & Healthcare Tech Innovator</title>
-    <link rel="icon" type="image/png" href="images/profile.jpg">
+    <title>Daniel Gakumba Ntwali | AI Engineer and Full-Stack Developer</title>
+    <meta name="description" content="Daniel Gakumba Ntwali is an AI engineer and full-stack developer in Kigali, Rwanda, building healthcare and agri-tech software.">
+    <meta name="theme-color" content="#F6F7F5">
+    <meta property="og:title" content="Daniel Gakumba Ntwali">
+    <meta property="og:description" content="AI engineer and full-stack developer building healthcare technology from Kigali, Rwanda.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231D6B4F'/%3E%3Ctext x='16' y='21.5' font-family='monospace' font-size='15' font-weight='700' text-anchor='middle' fill='white'%3EDN%3C/text%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script>
+        // Set the theme before first paint so there is no flash.
+        (function () {
+            var theme = 'light';
+            try {
+                var saved = localStorage.getItem('theme');
+                if (saved === 'light' || saved === 'dark') {
+                    theme = saved;
+                } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    theme = 'dark';
+                }
+            } catch (e) {}
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="cursor"></div>
-    <div id="cursor-follower"></div>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="shape shape1"></div>
-        <div class="shape shape2"></div>
-        <div class="shape shape3"></div>
-        
-        <div class="hero-content">
-            <div class="profile-image-container fade-in-scale">
-                <img src="images/profile.jpg" class="profile-image">
-                <div class="profile-ring"></div>
-            </div>
-            
-            <div class="glitch-wrapper">
-                <h1 class="glitch-text">DANIEL GAKUMBA NTWALI</h1>
-            </div>
-            <p class="subtitle">AI Engineer • Full-Stack Developer • Healthcare Tech Innovator</p>
-            <p class="hero-tagline">🏥 Revolutionizing Healthcare Through AI & Technology</p>
-        </div>
-        
-        <div class="scroll-indicator">
-            <span></span>
-        </div>
-    </section>
+    <header class="site-header">
+        <div class="wrap header-bar">
+            <a class="brand" href="#top" aria-label="Daniel Gakumba Ntwali, back to top">
+                <span class="brand-mark">DN</span>
+                <span class="brand-name">Daniel Ntwali</span>
+            </a>
 
-    <!-- Introduction Section -->
-    <section class="section intro-section">
-        <div class="intro-content">
-            <div class="intro-text slide-in-diagonal">
-                <h2 class="intro-title">Who I Am</h2>
-                <p class="intro-paragraph">
-                    I'm an innovative and resilient software engineer currently pursuing my BSc (Hons) in Software Engineering at African Leadership University. My passion lies at the intersection of healthcare and technology, where I leverage AI and cutting-edge software solutions to revolutionize how we approach health services.
-                </p>
-                <p class="intro-paragraph">
-                    With hands-on experience as an AI Engineer and Lead Software Developer, I've designed and deployed intelligent systems that make a real difference—from AI-powered healthcare platforms to agricultural management tools. My journey spans multiple continents and diverse tech ecosystems, from IT support in Warsaw to building transformative applications in Kigali.
-                </p>
-                <p class="intro-paragraph">
-                    I believe in the power of technology to solve humanity's greatest challenges, and I'm committed to creating solutions that are not just innovative, but also accessible and impactful. Whether it's developing an AI triage bot for telemedicine or implementing data-driven business strategies, my goal is to bridge the gap between cutting-edge technology and real-world needs.
-                </p>
-                <div class="intro-highlight">
-                    <span class="highlight-icon">🎯</span>
-                    <span class="highlight-text">Mission: Making healthcare accessible through intelligent technology</span>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <a class="btn btn-small header-cta" href="#contact">Contact</a>
+                <button class="icon-button theme-toggle" type="button" aria-label="Switch to dark theme">
+                    <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4"/>
+                        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+                    </svg>
+                    <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- Hero -->
+        <section class="hero" id="top">
+            <div class="wrap hero-grid">
+                <div class="hero-copy">
+                    <p class="status reveal" style="--d: 0ms">
+                        <span class="status-dot" aria-hidden="true"></span>
+                        Open to healthcare and AI collaborations
+                    </p>
+                    <h1 class="reveal" style="--d: 60ms">Daniel Gakumba Ntwali</h1>
+                    <p class="hero-role reveal" style="--d: 120ms">AI engineer and <span class="nowrap">full-stack</span> developer building healthcare technology.</p>
+                    <p class="hero-lede reveal" style="--d: 180ms">
+                        I&rsquo;m a software engineering student at African Leadership University in Kigali. Right now I&rsquo;m building <span class="nowrap">E-Vuze</span>, an AI-powered healthcare platform for appointment booking, pharmacy stock checks and triage.
+                    </p>
+                    <div class="actions reveal" style="--d: 240ms">
+                        <a class="btn btn-primary" href="#projects">See projects</a>
+                        <a class="btn btn-secondary" href="#contact">Get in touch</a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <figure class="portrait reveal" style="--d: 120ms">
+                        <img src="images/profile.jpg" alt="Portrait of Daniel Gakumba Ntwali smiling, wearing a blue and white patterned shirt with greenery behind him" width="864" height="1080" decoding="async">
+                    </figure>
+
+                    <div class="code-card reveal" style="--d: 320ms" role="group" aria-label="Profile summary written as code">
+                        <div class="code-tab"><span>profile.ts</span></div>
+<pre><code><span class="line"><span class="tk-kw">const</span> <span class="tk-var">daniel</span> <span class="tk-pn">=</span> <span class="tk-pn">{</span></span>
+<span class="line">  <span class="tk-key">role</span><span class="tk-pn">:</span> <span class="tk-str">"AI engineer"</span><span class="tk-pn">,</span></span>
+<span class="line">  <span class="tk-key">building</span><span class="tk-pn">:</span> <span class="tk-str">"E-Vuze"</span><span class="tk-pn">,</span></span>
+<span class="line">  <span class="tk-key">focus</span><span class="tk-pn">:</span> <span class="tk-pn">[</span><span class="tk-str">"healthcare"</span><span class="tk-pn">,</span> <span class="tk-str">"AI"</span><span class="tk-pn">,</span> <span class="tk-str">"agritech"</span><span class="tk-pn">],</span></span>
+<span class="line">  <span class="tk-key">studying</span><span class="tk-pn">:</span> <span class="tk-str">"BSc Software Engineering"</span><span class="tk-pn">,</span></span>
+<span class="line">  <span class="tk-key">school</span><span class="tk-pn">:</span> <span class="tk-str">"African Leadership University"</span><span class="tk-pn">,</span></span>
+<span class="line">  <span class="tk-key">location</span><span class="tk-pn">:</span> <span class="tk-str">"Kigali, Rwanda"</span><span class="tk-pn">,</span></span>
+<span class="line">  <span class="tk-key">languages</span><span class="tk-pn">:</span> <span class="tk-num">5</span><span class="tk-pn">,</span></span>
+<span class="line">  <span class="tk-key">available</span><span class="tk-pn">:</span> <span class="tk-num">true</span><span class="tk-pn">,</span></span>
+<span class="line"><span class="tk-pn">};</span></span></code></pre>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section class="section">
-        <h2 class="section-title">What I Do</h2>
-        <div class="cards-grid">
-            <div class="card fade-in-up">
-                <div class="card-icon">🤖</div>
-                <h3>AI Engineering</h3>
-                <p>Building intelligent systems that solve real-world problems. From healthcare AI triage bots to data-driven agricultural solutions.</p>
-            </div>
-            <div class="card fade-in-up">
-                <div class="card-icon">💻</div>
-                <h3>Full-Stack Development</h3>
-                <p>Creating robust web and mobile applications with modern technologies. Specializing in scalable, user-centric solutions.</p>
-            </div>
-            <div class="card fade-in-up">
-                <div class="card-icon">🏥</div>
-                <h3>Healthcare Innovation</h3>
-                <p>Passionate about transforming healthcare through technology. Currently building E-Vuze, an AI-powered healthcare platform.</p>
-            </div>
-        </div>
+        <!-- About -->
+        <section class="section" id="about">
+            <div class="wrap grid-12">
+                <div class="section-head">
+                    <h2>About</h2>
+                </div>
+                <div class="section-body">
+                    <div class="prose">
+                        <p>I&rsquo;m a software engineer studying for a BSc (Hons) in Software Engineering at African Leadership University. I like working where healthcare and technology meet, and I use AI and software to make health services easier to reach.</p>
+                        <p>I&rsquo;ve worked as an AI engineer and lead software developer, and I&rsquo;ve shipped everything from healthcare platforms to farm management tools. My work has taken me from IT support in Warsaw to building applications in Kigali.</p>
+                        <p>I care about solutions that are practical and accessible, whether that&rsquo;s an AI triage bot for telemedicine or a data-driven sales forecast for a small business.</p>
+                    </div>
 
-        <div class="fun-facts">
-            <a href="#experience" class="fact">
-                <span class="fact-number">4+</span>
-                <span class="fact-label">Years Experience</span>
-            </a>
-            <a href="#projects" class="fact">
-                <span class="fact-number">6+</span>
-                <span class="fact-label">Major Projects</span>
-            </a>
-            <a href="#skills" class="fact">
-                <span class="fact-number">∞</span>
-                <span class="fact-label">Lines of Code</span>
-            </a>
-            <a href="#languages" class="fact">
-                <span class="fact-number">5</span>
-                <span class="fact-label">Languages Spoken</span>
-            </a>
-        </div>
-    </section>
+                    <p class="mission">Mission: make healthcare accessible through intelligent technology.</p>
 
-    <!-- Projects Section -->
-    <section class="section" id="projects">
-        <h2 class="section-title">Some Featured Projects</h2>
-        <div class="projects-grid">
-            <a href="#" class="project-link scale-in" data-project="evuze">
-                <div class="project-card">
-                    <div class="project-link-indicator">↗</div>
-                    <div class="project-image-placeholder">🏥</div>
-                    <div class="project-content">
+                    <dl class="stats">
+                        <div><dt>Years of experience</dt><dd>4+</dd></div>
+                        <div><dt>Major projects</dt><dd>6+</dd></div>
+                        <div><dt>Languages spoken</dt><dd>5</dd></div>
+                    </dl>
+
+                    <ul class="focus-list">
+                        <li>
+                            <span class="focus-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg>
+                            </span>
+                            <div>
+                                <h3>AI engineering</h3>
+                                <p>Intelligent systems for real problems, from healthcare triage bots to data-driven agricultural tools.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="focus-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>
+                            </span>
+                            <div>
+                                <h3>Full-stack development</h3>
+                                <p>Web and mobile applications built with modern tools, designed to scale and to be easy to use.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="focus-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                            </span>
+                            <div>
+                                <h3>Healthcare innovation</h3>
+                                <p>Using technology to improve access to care. I&rsquo;m currently building <span class="nowrap">E-Vuze</span>, an AI-powered healthcare platform.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="section" id="projects">
+            <div class="wrap">
+                <div class="section-head section-head-wide">
+                    <h2>Projects</h2>
+                    <p>A selection of products I&rsquo;ve built or led.</p>
+                </div>
+
+                <div class="projects-grid">
+                    <article class="project">
+                        <div class="project-preview" aria-hidden="true">
+                            <span class="project-glyph">
+                                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M12 8v8M8 12h8"/></svg>
+                            </span>
+                        </div>
+                        <div class="project-body">
+                            <h3><span class="nowrap">E-Vuze</span> healthcare platform</h3>
+                            <p>AI-powered platform for appointment booking, pharmacy stock checks and an AI triage bot that decides between telemedicine and in-person visits.</p>
+                            <a class="project-link" href="https://evuze.ubwengelab.rw/" target="_blank" rel="noopener noreferrer">
+                                Visit evuze.ubwengelab.rw
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                            </a>
+                            <ul class="tags">
+                                <li>AI/ML</li>
+                                <li>React Native</li>
+                                <li>Python</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="project">
+                        <div class="project-preview" aria-hidden="true">
+                            <span class="project-glyph">
+                                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></svg>
+                            </span>
+                        </div>
+                        <div class="project-body">
+                            <h3>Ubwenge Lab website</h3>
+                            <p>Company website for UBWENGE LAB, presenting the company and its services.</p>
+                            <a class="project-link" href="https://ubwengelab.rw/" target="_blank" rel="noopener noreferrer">
+                                Visit ubwengelab.rw
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                            </a>
+                            <ul class="tags">
+                                <li>React</li>
+                                <li>Web development</li>
+                                <li>UI/UX</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="project">
+                        <div class="project-preview" aria-hidden="true">
+                            <span class="project-glyph">
+                                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-10"/><path d="M12 11c0-3.2-2.4-5-6-5 0 3.2 2.4 5 6 5Z"/><path d="M12 14c0-3.2 2.4-5 6-5 0 3.2-2.4 5-6 5Z"/></svg>
+                            </span>
+                        </div>
+                        <div class="project-body">
+                            <h3>HEIS agri-tech platform</h3>
+                            <p>Management app for farmers and suppliers that uses AI and data analysis to support better decisions and day-to-day operations.</p>
+                            <a class="project-link" href="https://heis.farm/" target="_blank" rel="noopener noreferrer">
+                                Visit heis.farm
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                            </a>
+                            <ul class="tags">
+                                <li>AI</li>
+                                <li>Web app</li>
+                                <li>Data analysis</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="project">
+                        <div class="project-preview" aria-hidden="true">
+                            <span class="project-glyph">
+                                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6l8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+                            </span>
+                        </div>
+                        <div class="project-body">
+                            <h3>Cybox data protection system</h3>
+                            <p>Data protection and security system built for compliance, data integrity and secure information management.</p>
+                            <ul class="tags">
+                                <li>Cybersecurity</li>
+                                <li>Python</li>
+                                <li>Encryption</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="project">
+                        <div class="project-preview" aria-hidden="true">
+                            <span class="project-glyph">
+                                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                            </span>
+                        </div>
+                        <div class="project-body">
+                            <h3>Athlete Tracker</h3>
+                            <p>Fitness and performance tracking app for athletes, with live monitoring, training analytics and progress charts.</p>
+                            <a class="project-link" href="https://project-schwarzenegger.netlify.app/" target="_blank" rel="noopener noreferrer">
+                                Visit project-schwarzenegger.netlify.app
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                            </a>
+                            <ul class="tags">
+                                <li>Mobile app</li>
+                                <li>Analytics</li>
+                                <li>Real-time data</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="project">
+                        <div class="project-preview" aria-hidden="true">
+                            <span class="project-glyph">
+                                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18M6 20v-7M12 20V5M18 20v-10"/></svg>
+                            </span>
+                        </div>
+                        <div class="project-body">
+                            <h3>Precious Dishes digital platform</h3>
+                            <p>Built the company website and a data-driven sales forecast, with a projected 15% increase in sales.</p>
+                            <a class="project-link" href="https://preciousdishes.net/" target="_blank" rel="noopener noreferrer">
+                                Visit preciousdishes.net
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                            </a>
+                            <ul class="tags">
+                                <li>Web development</li>
+                                <li>Data analytics</li>
+                                <li>Forecasting</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section class="section" id="experience">
+            <div class="wrap grid-12">
+                <div class="section-head">
+                    <h2>Experience</h2>
+                </div>
+                <div class="section-body">
+                    <ol class="experience">
+                        <li>
+                            <div class="exp-when">
+                                <span>Oct 2025 to present</span>
+                                <span>Kigali, Rwanda</span>
+                            </div>
+                            <div class="exp-what">
+                                <h3>Sales and IT Manager</h3>
+                                <p class="exp-company">Precious Dishes Rwanda LTD</p>
+                                <p>Leading digital transformation, building the company website, setting up data-driven sales forecasting and managing IT infrastructure.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="exp-when">
+                                <span>Jan 2024 to Dec 2024</span>
+                                <span>Kigali, Rwanda</span>
+                            </div>
+                            <div class="exp-what">
+                                <h3>AI Engineer and Lead Software Developer</h3>
+                                <p class="exp-company">Cybox</p>
+                                <p>Designed and deployed AI-driven web applications, including HEIS. Set up collaborative workflows that sped up delivery and improved system performance.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="exp-when">
+                                <span>Aug 2023 to Dec 2023</span>
+                                <span>Kigali, Rwanda</span>
+                            </div>
+                            <div class="exp-what">
+                                <h3>AI Engineer and Software Developer</h3>
+                                <p class="exp-company">Africa Quantitative Science</p>
+                                <p>Built and delivered two AI-powered web applications in four months, helping clients make decisions with their data.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="exp-when">
+                                <span>Jul 2022 to Nov 2022</span>
+                                <span>Warsaw, Poland</span>
+                            </div>
+                            <div class="exp-what">
+                                <h3>IT Support, Desktop Support</h3>
+                                <p class="exp-company">Capgemini</p>
+                                <p>Resolved hardware and software issues in networked environments and shortened resolution times through cleaner support workflows.</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="section" id="skills">
+            <div class="wrap grid-12">
+                <div class="section-head">
+                    <h2>Skills</h2>
+                    <p>I write code to solve real problems, from healthcare access to farm operations.</p>
+                </div>
+                <div class="section-body">
+                    <div class="skill-groups">
+                        <div class="skill-group">
+                            <h3>AI and data</h3>
+                            <ul class="tags tags-lg">
+                                <li>Python</li>
+                                <li>AI/ML</li>
+                                <li>Data analysis</li>
+                            </ul>
+                        </div>
+                        <div class="skill-group">
+                            <h3>Web and mobile</h3>
+                            <ul class="tags tags-lg">
+                                <li>Web development</li>
+                                <li>React</li>
+                                <li>React Native</li>
+                            </ul>
+                        </div>
+                        <div class="skill-group">
+                            <h3>Systems and IT</h3>
+                            <ul class="tags tags-lg">
+                                <li>Linux</li>
+                                <li>Windows administration</li>
+                                <li>Networking</li>
+                                <li>Hardware setup</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Languages -->
+        <section class="section" id="languages">
+            <div class="wrap grid-12">
+                <div class="section-head">
+                    <h2>Languages</h2>
+                    <p>Five languages, at different levels.</p>
+                </div>
+                <div class="section-body">
+                    <ul class="languages">
+                        <li>
+                            <span class="lang-name">English</span>
+                            <span class="lang-note">Professional working proficiency</span>
+                            <span class="level" role="img" aria-label="Fluent"><i></i><i></i><i></i><i></i><i></i></span>
+                            <span class="lang-level">Fluent</span>
+                        </li>
+                        <li>
+                            <span class="lang-name">French</span>
+                            <span class="lang-note">Full professional proficiency</span>
+                            <span class="level" role="img" aria-label="Fluent"><i></i><i></i><i></i><i></i><i></i></span>
+                            <span class="lang-level">Fluent</span>
+                        </li>
+                        <li>
+                            <span class="lang-name">Kinyarwanda</span>
+                            <span class="lang-note">Conversational proficiency</span>
+                            <span class="level level-3" role="img" aria-label="Intermediate"><i></i><i></i><i></i><i></i><i></i></span>
+                            <span class="lang-level">Intermediate</span>
+                        </li>
+                        <li>
+                            <span class="lang-name">Swahili</span>
+                            <span class="lang-note">Conversational proficiency</span>
+                            <span class="level level-3" role="img" aria-label="Intermediate"><i></i><i></i><i></i><i></i><i></i></span>
+                            <span class="lang-level">Intermediate</span>
+                        </li>
+                        <li>
+                            <span class="lang-name">Polish</span>
+                            <span class="lang-note">Basic conversation</span>
+                            <span class="level level-1" role="img" aria-label="Beginner"><i></i><i></i><i></i><i></i><i></i></span>
+                            <span class="lang-level">Beginner</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="section" id="contact">
+            <div class="wrap grid-12">
+                <div class="section-head">
+                    <h2>Contact</h2>
+                    <p>Interested in working together on healthcare tech or AI? Send me a message.</p>
+                </div>
+                <div class="section-body">
+                    <dl class="contact-list">
                         <div>
-                            <h3 class="project-title">E-Vuze Healthcare Platform</h3>
-                            <p class="project-desc">Comprehensive AI-powered healthcare platform featuring appointment booking, pharmacy stock checking, and an intelligent AI triage bot to prioritize telemedicine vs in-person visits.</p>
+                            <dt>Email</dt>
+                            <dd>
+                                <a class="contact-email" href="mailto:danielgntwali@gmail.com">danielgntwali@gmail.com</a>
+                                <button class="btn btn-secondary btn-small copy-btn" type="button" data-copy="danielgntwali@gmail.com">Copy</button>
+                                <span class="copy-status" role="status" aria-live="polite"></span>
+                            </dd>
                         </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">AI/ML</span>
-                            <span class="tech-tag">React Native</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Healthcare</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="#" class="project-link scale-in" data-project="evuze-web">
-                <div class="project-card">
-                    <div class="project-link-indicator">↗</div>
-                    <div class="project-image-placeholder">🌐</div>
-                    <div class="project-content">
                         <div>
-                            <h3 class="project-title">E-Vuze Website</h3>
-                            <p class="project-desc">Public-facing website for E-Vuze healthcare platform. Features service information, provider directories, health resources, and patient portal access.</p>
+                            <dt>Phone</dt>
+                            <dd><a href="tel:+250780552255">+250 780 552 255</a></dd>
                         </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Web Development</span>
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">UI/UX</span>
-                            <span class="tech-tag">Healthcare</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="https://heis.farm/" class="project-link scale-in" data-project="heis">
-                <div class="project-card">
-                    <div class="project-link-indicator">↗</div>
-                    <div class="project-image-placeholder">🌾</div>
-                    <div class="project-content">
                         <div>
-                            <h3 class="project-title">HEIS Agri-Tech Platform</h3>
-                            <p class="project-desc">Farmers and suppliers management app that helps agricultural businesses leverage AI and data analysis for better decision-making and operations.</p>
+                            <dt>Location</dt>
+                            <dd>Kigali, Rwanda</dd>
                         </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">AI</span>
-                            <span class="tech-tag">Web App</span>
-                            <span class="tech-tag">Data Analysis</span>
-                            <span class="tech-tag">AgriTech</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="#" class="project-link scale-in" data-project="cybox">
-                <div class="project-card">
-                    <div class="project-link-indicator">↗</div>
-                    <div class="project-image-placeholder">🔒</div>
-                    <div class="project-content">
                         <div>
-                            <h3 class="project-title">Cybox Data Protection System</h3>
-                            <p class="project-desc">Enterprise-grade data protection and security system ensuring compliance, data integrity, and secure information management.</p>
+                            <dt>LinkedIn</dt>
+                            <dd><a href="https://www.linkedin.com/in/daniel-ntwali-b39abb216/" target="_blank" rel="noopener noreferrer">linkedin.com/in/daniel-ntwali-b39abb216</a></dd>
                         </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Cybersecurity</span>
-                            <span class="tech-tag">Data Protection</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Encryption</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="#" class="project-link scale-in" data-project="athlete">
-                <div class="project-card">
-                    <div class="project-link-indicator">↗</div>
-                    <div class="project-image-placeholder">🏃</div>
-                    <div class="project-content">
                         <div>
-                            <h3 class="project-title">Athlete Tracker</h3>
-                            <p class="project-desc">Comprehensive fitness and performance tracking application for athletes. Features real-time monitoring, training analytics, and progress visualization.</p>
+                            <dt>GitHub</dt>
+                            <dd><a href="https://github.com/Dantwalig" target="_blank" rel="noopener noreferrer">github.com/Dantwalig</a></dd>
                         </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Mobile App</span>
-                            <span class="tech-tag">Analytics</span>
-                            <span class="tech-tag">Real-time Data</span>
-                            <span class="tech-tag">Sports Tech</span>
-                        </div>
-                    </div>
+                    </dl>
                 </div>
-            </a>
-            
-            <a href="#" class="project-link scale-in" data-project="precious">
-                <div class="project-card">
-                    <div class="project-link-indicator">↗</div>
-                    <div class="project-image-placeholder">🍽️</div>
-                    <div class="project-content">
-                        <div>
-                            <h3 class="project-title">Precious Dishes Digital Platform</h3>
-                            <p class="project-desc">Led digital transformation by developing company website and implementing data-driven sales forecasting, achieving 15% projected sales increase.</p>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Web Development</span>
-                            <span class="tech-tag">Data Analytics</span>
-                            <span class="tech-tag">Sales Forecasting</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </section>
+            </div>
+        </section>
+    </main>
 
-    <!-- Experience Section -->
-    <section class="section" id="experience">
-        <h2 class="section-title">Experience Journey</h2>
-        <div class="timeline">
-            <div class="timeline-item fade-in-left">
-                <div class="timeline-role">Sales & IT Manager</div>
-                <div class="timeline-company">Precious Dishes Rwanda LTD</div>
-                <div class="timeline-date">October 2025 – Present • Kigali, Rwanda</div>
-                <div class="timeline-desc">Leading digital transformation initiatives, developing company website, implementing data-driven sales forecasting, and managing IT infrastructure.</div>
-            </div>
-            
-            <div class="timeline-item fade-in-right">
-                <div class="timeline-role">AI Engineer & Lead Software Developer</div>
-                <div class="timeline-company">Cybox</div>
-                <div class="timeline-date">January 2024 – December 2024 • Kigali, Rwanda</div>
-                <div class="timeline-desc">Designed and deployed AI-driven web applications including HEIS. Championed collaborative workflows for efficient project delivery and improved system performance.</div>
-            </div>
-            
-            <div class="timeline-item fade-in-left">
-                <div class="timeline-role">AI Engineer & Software Developer</div>
-                <div class="timeline-company">Africa Quantitative Science</div>
-                <div class="timeline-date">August 2023 – December 2023 • Kigali, Rwanda</div>
-                <div class="timeline-desc">Built and delivered two AI-powered web applications within four months, streamlining data-driven decision-making for clients.</div>
-            </div>
-            
-            <div class="timeline-item fade-in-right">
-                <div class="timeline-role">IT Support (Desktop Support)</div>
-                <div class="timeline-company">Capgemini</div>
-                <div class="timeline-date">July 2022 – November 2022 • Warsaw, Poland</div>
-                <div class="timeline-desc">Resolved hardware and software issues in networked environments, improving resolution times and user satisfaction through efficient support workflows.</div>
-            </div>
+    <footer class="site-footer">
+        <div class="wrap footer-bar">
+            <p>&copy; <span id="year">2026</span> Daniel Gakumba Ntwali</p>
+            <p class="footer-note">Hand-written HTML, CSS and JavaScript. No frameworks.</p>
         </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="section" id="skills">
-        <h2 class="section-title">Tech Arsenal</h2>
-        <div class="code-explanation rotate-in">
-            <h3>💻 Why I Code</h3>
-            <p>Every line of code I write is driven by a passion for solving real-world problems and creating impact. From healthcare accessibility to agricultural optimization, I believe technology should serve humanity's greatest needs.</p>
-            <div class="code-stats">
-                <div class="code-stat">
-                    <span class="code-stat-number">10,000+</span>
-                    <span class="code-stat-label">Hours Coding</span>
-                </div>
-                <div class="code-stat">
-                    <span class="code-stat-number">50+</span>
-                    <span class="code-stat-label">Technologies Learned</span>
-                </div>
-                <div class="code-stat">
-                    <span class="code-stat-number">100%</span>
-                    <span class="code-stat-label">Dedication</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="skills-grid">
-            <div class="skill-item scale-in">
-                <div class="skill-icon">🐍</div>
-                <div class="skill-name">Python</div>
-            </div>
-            <div class="skill-item scale-in">
-                <div class="skill-icon">🌐</div>
-                <div class="skill-name">Web Development</div>
-            </div>
-            <div class="skill-item scale-in">
-                <div class="skill-icon">🤖</div>
-                <div class="skill-name">AI/ML</div>
-            </div>
-            <div class="skill-item scale-in">
-                <div class="skill-icon">🐧</div>
-                <div class="skill-name">Linux</div>
-            </div>
-            <div class="skill-item scale-in">
-                <div class="skill-icon">🪟</div>
-                <div class="skill-name">Windows Admin</div>
-            </div>
-            <div class="skill-item scale-in">
-                <div class="skill-icon">🔧</div>
-                <div class="skill-name">Hardware Setup</div>
-            </div>
-            <div class="skill-item scale-in">
-                <div class="skill-icon">🌐</div>
-                <div class="skill-name">Networking</div>
-            </div>
-            <div class="skill-item scale-in">
-                <div class="skill-icon">📊</div>
-                <div class="skill-name">Data Analysis</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Languages Section -->
-    <section class="section" id="languages">
-        <h2 class="section-title">Languages I Speak</h2>
-        <div class="cards-grid">
-            <div class="card fade-in-up">
-                <div class="card-icon">🇬🇧</div>
-                <h3>English</h3>
-                <p>Fluent - Professional working proficiency</p>
-            </div>
-            <div class="card fade-in-up">
-                <div class="card-icon">🇫🇷</div>
-                <h3>French</h3>
-                <p>Fluent - Full professional proficiency</p>
-            </div>
-            <div class="card fade-in-up">
-                <div class="card-icon">🇷🇼</div>
-                <h3>Kinyarwanda</h3>
-                <p>Intermediate - Conversational proficiency</p>
-            </div>
-            <div class="card fade-in-up">
-                <div class="card-icon">🇰🇪</div>
-                <h3>Swahili</h3>
-                <p>Intermediate - Conversational proficiency</p>
-            </div>
-            <div class="card fade-in-up">
-                <div class="card-icon">🇵🇱</div>
-                <h3>Polish</h3>
-                <p>Beginner - Basic conversational skills</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="section">
-        <div class="contact-content">
-            <div class="contact-text">
-                <h2>Let's Build Something Amazing</h2>
-                <p>Interested in collaborating on healthcare tech or AI projects? Let's connect!</p>
-                
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <span>📧</span>
-                        <div>danielgntwali@gmail.com</div>
-                    </div>
-                    <div class="contact-item">
-                        <span>📱</span>
-                        <div>+250 780 552 255</div>
-                    </div>
-                    <div class="contact-item">
-                        <span>📍</span>
-                        <div>Kigali, Rwanda</div>
-                    </div>
-                </div>
-                
-                <a href="mailto:danielgntwali@gmail.com" class="cta-button">Get In Touch</a>
-                
-                <div class="social-links">
-                    <a href="www.linkedin.com/in/daniel-ntwali-b39abb216" target="_blank" class="social-link" title="LinkedIn">in</a>
-                    <a href="https://github.com/Dantwalig" target="_blank" class="social-link" title="GitHub">GH</a>
-                    <a href="tel:+250780552255" class="social-link" title="Phone">📱</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    </footer>
 
     <script src="script.js"></script>
 </body>
